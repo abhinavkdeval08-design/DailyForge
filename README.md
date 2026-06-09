@@ -299,7 +299,19 @@ JWT_SECRET=your_super_secret_key_here
 
 Copy the provided `.env.example` to a new file named `.env`.
 
+| Variable                            | Required | Description                                                                                   |
+| ----------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| `VITE_API_URL`                      | ✅       | Base URL for frontend API requests, usually `http://localhost:5000/api` in local development. |
+| `VITE_FIREBASE_API_KEY`             | ✅       | Firebase client API key used by Firebase SDK for authentication.                              |
+| `VITE_FIREBASE_AUTH_DOMAIN`         | ✅       | Firebase Auth domain for your project (e.g. `your-project.firebaseapp.com`).                  |
+| `VITE_FIREBASE_PROJECT_ID`          | ✅       | Firebase project identifier used by the frontend and backend.                                 |
+| `VITE_FIREBASE_STORAGE_BUCKET`      | ✅       | Firebase storage bucket name for your project (even if storage is not used directly).         |
+| `VITE_FIREBASE_MESSAGING_SENDER_ID` | ✅       | Firebase messaging sender ID required for client configuration.                               |
+| `VITE_FIREBASE_APP_ID`              | ✅       | Firebase app ID for the registered web app.                                                   |
+
 **Running locally?** Update `VITE_API_URL` in your local `.env` file to `http://localhost:5000/api/`.
+
+> Note: For Firebase credential values, see the existing [Google Authentication Setup](#-google-authentication-setup) section below.
 
 ---
 
